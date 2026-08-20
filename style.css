@@ -1,0 +1,284 @@
+/* Paleta de colores y variables */
+:root {
+    --primary-color: #2c3e50; /* Azul oscuro elegante */
+    --secondary-color: #3498db; /* Azul claro para acentos */
+    --background-color: #f4f7f6; /* Fondo gris muy claro */
+    --text-color: #333333;
+    --white: #ffffff;
+}
+
+/* Reset básico para evitar márgenes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Permite que el footer baje si hay poco contenido */
+}
+
+/* --- Navegación (Flexbox) --- */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--secondary-color);
+}
+
+/* --- Contenedor Principal --- */
+main.container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* --- Tarjetas del Menú Principal --- */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 280px;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--secondary-color);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+/* --- Estilos para las Subpáginas --- */
+.content-box {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.content-box h1 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.content-box h2 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+.topic-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.topic-section:last-child {
+    border-bottom: none;
+}
+
+/* --- Estilos específicos para el Experimento --- */
+.formula-box {
+    background-color: #e8f4f8; /* Un fondo azul muy suave y limpio */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color); /* Línea decorativa a la izquierda */
+}
+
+.ecuacion {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 15px 0;
+    letter-spacing: 2px;
+}
+
+.experiment-list {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.experiment-list li {
+    margin-bottom: 12px;
+}
+
+.procedure li {
+    padding-left: 10px; /* Le da un poco de espacio al texto después del número */
+}
+
+/* --- Estilos para Imágenes --- */
+.responsive-img {
+    max-width: 100%; /* La imagen nunca se saldrá de la pantalla */
+    height: auto;    /* Mantiene la proporción sin deformarse */
+    border-radius: 8px; /* Bordes redondeados estéticos */
+    margin: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: block; /* Centra la imagen */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Estilos para incrustar GeoGebra responsivo --- */
+.geogebra-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* Crea una proporción perfecta (16:9) */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.geogebra-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Estilos para la sección de documentos --- */
+.docs-grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.doc-card {
+    background-color: var(--background-color);
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.doc-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.doc-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #2980b9;
+}

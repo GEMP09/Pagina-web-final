@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" flex-wrap: wrap>
+    <title>Cubo de un Binomio - Proyecto Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Mi Proyecto Final</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="newton.html" >Isaac Newton</a></li>
+                <li><a href="peroxido.html" >Peróxido de Hidrógeno</a></li>
+                <li><a href="binomio.html" class="active">Cubo de un Binomio</a></li>
+                <li><a href="materiales.html">Material Informativo</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <article class="content-box">
+            <h1>Modelo de Demostración en 3D del Cubo de un Binomio</h1>
+            
+            <section class="topic-section">
+                <h2>Concepto Matemático</h2>
+                <p>El cubo de un binomio es un producto notable que resulta de multiplicar un binomio por sí mismo tres veces. De forma geométrica, representa el volumen de un cubo perfecto donde cada uno de sus lados tiene una longitud total de <strong>(a + b)</strong>.</p>
+            </section>
+
+            <section class="topic-section formula-box">
+                <h2>Fórmula Algebraica</h2>
+                <p>La regla matemática establece que el cubo de la suma de dos términos es igual al cubo del primero, más el triple del cuadrado del primero por el segundo, más el triple del primero por el cuadrado del segundo, más el cubo del segundo:</p>
+                <div class="ecuacion">
+                    (a + b)<sup>3</sup> = a<sup>3</sup> + 3a<sup>2</sup>b + 3ab<sup>2</sup> + b<sup>3</sup>
+                </div>
+            </section>
+
+            <section class="topic-section">
+                <h2>Desglose de las Piezas del Modelo 3D</h2>
+                <p>Para demostrar este teorema de manera tangible, el volumen total se divide en 8 piezas geométricas distintas. Cada grupo de piezas corresponde directamente a un término de la fórmula:</p>
+                <ul class="experiment-list">
+                    <li><strong>1 Cubo mayor (a<sup>3</sup>):</strong> Representa el volumen del primer término. Tiene dimensiones de <em>a &times; a &times; a</em>.</li>
+                    <li><strong>3 Prismas rectangulares (3a<sup>2</sup>b):</strong> Tienen una base cuadrada de lado <em>a</em> y una altura de <em>b</em>.</li>
+                    <li><strong>3 Prismas rectangulares (3ab<sup>2</sup>):</strong> Tienen una base cuadrada de lado <em>b</em> y una altura de <em>a</em>.</li>
+                    <li><strong>1 Cubo menor (b<sup>3</sup>):</strong> Representa el volumen del segundo término. Tiene dimensiones de <em>b &times; b &times; b</em>.</li>
+                </ul>
+            </section>
+
+            <section class="topic-section">
+                <h2>Ensamblaje Interactivo</h2>
+                <p>Interactúa con el modelo 3D directamente aquí. Puedes girarlo para observar cómo las 8 piezas encajan perfectamente para formar el cubo del binomio.</p>
+                
+                <div class="geogebra-container">
+                    <iframe scrolling="no" title="Copy of Cubo de binomio " src="https://www.geogebra.org/material/iframe/id/hYe84YDw/width/993/height/739/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="993px" height="739px" style="border:0px;"> </iframe>
+                    
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Proyecto Final</p>
+    </footer>
+</body>
+</html>
